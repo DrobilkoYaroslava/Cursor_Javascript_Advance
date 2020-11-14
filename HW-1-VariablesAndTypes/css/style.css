@@ -1,0 +1,110 @@
+body {
+    max-width: 1440px;
+    height: 100vh;
+    background-image: url(../img/joanna-kosinska-h2O_jHvjfIM-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Underdog', cursive;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.page {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+.heading {
+    text-align: center;
+}
+.heading__title {
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #fc052e 0px 0px 20px, #fc052e 0px 0px 30px, #fc052e 0px 0px 40px, #fc052e 0px 0px 50px, #fc052e 0px 0px 75px;
+    color: #FFFFFF;
+    font-size: 4rem;
+}
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    column-gap: 3rem; 
+}
+.products-container__item {
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 50px; 
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-content: space-between;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+.products-container__img {
+    width: 300px;
+    height: 230px;
+    border-radius: 50px;
+}
+.products-container__title {
+    font-size: 20px;
+    margin: 10px auto;
+    text-align: center;
+}
+.products-container__text {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 1rem;
+}
+.products-container__btn, .special-offer__btn {
+    width: 150px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    background-color: #fc052e;
+    font-family: 'Underdog', cursive;
+    font-size: 18px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+.products-container__btn:hover {
+    transform: scale(1.2);
+}
+.special-offer__heading {
+    font-size: 25px;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #fc052e 0px 0px 20px, #fc052e 0px 0px 30px, #fc052e 0px 0px 40px, #fc052e 0px 0px 50px, #fc052e 0px 0px 75px;
+    margin-bottom: 1rem;
+}
+.special-offer__text {
+    font-size: 22px;
+    text-shadow: #828282 0px 0px 5px, #828282 0px 0px 10px, #828282 0px 0px 15px;
+    margin-bottom: 0.5rem;
+}
+.special-offer__text--big {
+    margin: 1.3rem auto;
+}
+.special-offer__btn {
+    width: 250px;
+}
+.special-offer__btn:hover {
+    transform: scale(1.2);
+}
+.total-price-with-discount {
+    font-weight: bolder;
+    font-size: 28px;
+}
+
+.special-offer__btn-push { 
+    display: none;
+}
+.special-offer__btn:hover .special-offer__btn-text { 
+    display: none; 
+}
+.special-offer__btn:hover .special-offer__btn-push { 
+    display: inline; 
+}
+.special-offer__text--light{
+    font-weight: bolder;
+    color: #000;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #fc052e 0px 0px 20px, #fc052e 0px 0px 30px, #fc052e 0px 0px 40px, #fc052e 0px 0px 50px, #fc052e 0px 0px 75px;
+}

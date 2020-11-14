@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/rubber-duck.png">
+    <title>HW-1</title>
+</head>
+<body>
+    <div class="page">
+        <section class="heading">
+            <h1 class="heading__title">Акционное предложение</h1>
+        </section>
+        <section class="products-container">
+            <div class="products-container__item">
+                <img class="products-container__img" src="img/beauty-box-mr.scrubber-woman-r-76675618257477.jpg" alt="набор косметики">
+                <h3 class="products-container__title">Beauty Box WOMAN Mr.SCRUBBER</h3>
+                <p class="products-container__text">Состав: • Сахарный скраб для губ, 35ml • Гель для душа, 275ml • Сахарный скраб для тела, 300g • Маска для лица, 150g • Масло для ухода за ногтями и кутикулами, 10ml • Мочалка для душа</p>
+                <button class="products-container__btn" id="woman-box-price"></button>
+            </div>
+            <div class="products-container__item">
+                <img class="products-container__img" src="img/nabor-dlya-ukhoda-za-volosami-elixir-keratin-81066064239839.png" alt="набор косметики">
+                <h3 class="products-container__title">Набор для ухода за волосами Elixir Keratin</h3>
+                <p class="products-container__text">Состав: • Скраб для волос и кожи головы Elixir Keratin, 100 ml • Шампунь для волоc Elixir Keratin, 250 ml
+                    • Маска для восстановления волос Elixir Keratin, 250ml • Масло для роста волос Elixir Keratin, 50ml • Сухое масло-парфюм для волос Elixir Keratin, 115 ml.</p>
+                <button class="products-container__btn"  id="hair-box-price"></button>
+            </div>
+            <div class="products-container__item">
+                <img class="products-container__img" src="img/novogodniy-nabor-new-year-man-box-mr.scrubber-52726562023111.jpg" alt="набор косметики">
+                <h3 class="products-container__title">Новогодний набор New Year Man Box Mr.SCRUBBER</h3>
+                <p class="products-container__text">Состав: • Шампунь для тела и волос Man Hair & Body 2 in 1, 250 ml
+                    • Гель для душа Man Deep Ocean, 250 ml
+                    • Крем после бритья MAN, 100 ml
+                    • Кофейный скраб для тела Man Scrub, 100 g
+                    • Mыло-скраб для лица и тела с глиной и виноградной косточкой, 116 g</p>
+                <button class="products-container__btn" id="man-box-price"></button>
+            </div>
+        </section>
+        <section class="special-offer">
+            <h2 class="special-offer__heading">Специальное предложение</h2>
+                <p class="special-offer__text">Купить все наборы:&nbsp;
+                    <span class="special-offer__text--light" id="buy-all-amount"></span>
+                </p>
+                <p class="special-offer__text">Купить все (без монет):&nbsp;
+                    <span class="special-offer__text--light" id="buy-all-without-coins-amount"></span>
+                </p>
+                <p class="special-offer__text--big"> 
+                    <span class="total-price-with-discount"> Купить всё со скидкой:&nbsp;
+                        <span class="special-offer__text--light" id="buy-all-with-discount-amount"></span>
+                    </span>
+                </p>
+                <p class="special-offer__text">Мы свяжемся с Вами в ближайшее время &nbsp; &nbsp; &nbsp;
+                    <button class="special-offer__btn" type="submit" onclick="contactAction()">
+                        <span class="special-offer__btn-text">Ваш номер тел.</span>
+                        <span class="special-offer__btn-push" >Push me</span>
+                    </button>
+                </p>
+        </section>
+    </div>
+    <script src="main.js"></script>
+    <script src="debug.js"></script>
+</body>
+</html>
