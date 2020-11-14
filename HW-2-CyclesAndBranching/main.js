@@ -5,7 +5,7 @@ let isEven = true;
 
 function calculationAction(){
     let isNumber = numberValidation(startNumber.value, finishNumber.value); 
-    if (isNumber == true){
+    if (isNumber === true){
         let startInt = parseInt(startNumber.value);
         let finishInt = parseInt(finishNumber.value);
         let sum = getSum(startInt, finishInt, isEven);
@@ -21,7 +21,7 @@ function getSum(startNumber, finishNumber, isEven){
     for(let i = startNumber; i <= finishNumber; i++){
         switch(i % 2){
             case 0:
-                if (isEven == true){
+                if (isEven === true){
                     sum = sum + i;
                 }
             break;
@@ -40,7 +40,7 @@ function radioBtnAction(){
     radioBtnArray.forEach(element => element.checked = false);
     
     let activeRadioBtn = event.target;
-    isEven = parseInt(activeRadioBtn.value) == 1;
+    isEven = parseInt(activeRadioBtn.value) === 1;
     activeRadioBtn.checked = true;
 }
 function numberValidation(startNumber, finishNumber){
