@@ -1,10 +1,7 @@
 body {
     max-width: 1440px;
     height: 100vh;
-    background-image: url(../img/joanna-kosinska-h2O_jHvjfIM-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url(../img/joanna-kosinska-h2O_jHvjfIM-unsplash.jpg) center / cover no-repeat #0e0c13;
     font-family: 'Underdog', cursive;
     letter-spacing: 0.5px;
     color: #ffffff;
