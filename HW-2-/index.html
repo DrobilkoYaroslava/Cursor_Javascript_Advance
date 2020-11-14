@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>HW-2-"Цикли і Розгалуження"</title>
+</head>
+<body>
+    <form class="calculation">
+        <fieldset>
+            <legend class="calculation__title">Обчислення</legend>
+            <div class="calculation__input-box">
+                <label>
+                    Введіть початкове ціле числове значення
+                    <input class="calculation__input" type="number" id="start-number">
+                </label>
+            </div>
+            <div class="calculation__input-box">
+                <label>
+                    Введіть кінцеве ціле числове значення
+                    <input class="calculation__input" type="number" id="finish-number">
+                </label>
+            </div>
+            <div class="calculation__input-box">
+                <p class="calculation__input-box-title">Чи потрібно при підрахунку пропускати парні числа?</p>
+                <label> Так
+                    <input class="calculation__checkbox" type="radio" id="radio-yes" value="1" checked onclick="radioBtnAction()" >
+                </label>
+                <label> Ні
+                    <input class="calculation__checkbox" type="radio" id="radio-no" value="0" onclick="radioBtnAction()">
+                </label>
+            </div>
+            <button class="calculation__submit-btn" type="button" id="submit-btn" onclick="calculationAction()" >Обчислити</button>
+            <p class="calculation__result" id="calculation-result"></p>
+        </fieldset>
+    </form>
+    <script src="main.js"></script>
+</body>
+</html>
