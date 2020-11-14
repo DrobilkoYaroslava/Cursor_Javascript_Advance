@@ -1,6 +1,5 @@
 body {
     max-width: 1440px;
-    height: 100vh;
     background: url(../img/joanna-kosinska-h2O_jHvjfIM-unsplash.jpg) center / cover no-repeat #0e0c13;
     font-family: 'Underdog', cursive;
     letter-spacing: 0.5px;
@@ -9,7 +8,7 @@ body {
     box-sizing: border-box;
 }
 .page {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     padding-top: 1rem;
 }
@@ -23,23 +22,22 @@ body {
 }
 .products-container {
     display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    column-gap: 3rem; 
+    grid-template-columns: repeat(3, 33%);
+    column-gap: 1.5rem; 
 }
 .products-container__item {
     background-color: rgba(255, 255, 255, .5);
     border-radius: 50px; 
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 100%;
     grid-template-rows: auto;
     justify-items: center;
     align-content: space-between;
-    padding: 1.5rem;
+    padding: 5%;
     margin: 2rem 0;
 }
 .products-container__img {
-    width: 300px;
-    height: 230px;
+    width: 90%;
     border-radius: 50px;
 }
 .products-container__title {
