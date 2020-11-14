@@ -1,7 +1,7 @@
-let startNumber = document.querySelector("#start-number");
-let finishNumber = document.querySelector("#finish-number");
+const startNumber = document.querySelector("#start-number");
+const finishNumber = document.querySelector("#finish-number");
+const result = document.querySelector("#calculation-result");
 let isEven = true;
-let result = document.querySelector("#calculation-result");
 
 function calculationAction(){
     let isNumber = numberValidation(startNumber.value, finishNumber.value); 
