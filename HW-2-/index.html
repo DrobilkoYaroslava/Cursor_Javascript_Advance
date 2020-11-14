@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>HW-2-"Цикли і Розгалуження"</title>
 </head>
 <body>
     <form class="calculation">
-        <fieldset>
+        <fieldset class="calculation__field">
             <legend class="calculation__title">Обчислення</legend>
             <div class="calculation__input-box">
-                <label>
-                    Введіть початкове ціле числове значення
+                <label class="calculation__input-label">
+                    Введіть початкове ціле числове значення <br>
                     <input class="calculation__input" type="number" id="start-number">
                 </label>
             </div>
             <div class="calculation__input-box">
-                <label>
-                    Введіть кінцеве ціле числове значення
+                <label class="calculation__input-label">
+                    Введіть кінцеве ціле числове значення <br>
                     <input class="calculation__input" type="number" id="finish-number">
                 </label>
             </div>
             <div class="calculation__input-box">
-                <p class="calculation__input-box-title">Чи потрібно при підрахунку пропускати парні числа?</p>
-                <label> Так
-                    <input class="calculation__checkbox" type="radio" id="radio-yes" value="1" checked onclick="radioBtnAction()" >
-                </label>
-                <label> Ні
-                    <input class="calculation__checkbox" type="radio" id="radio-no" value="0" onclick="radioBtnAction()">
-                </label>
+                <p class="calculation__input-box-title">Враховувати при обчисленні парні числа?</p>
+                <div class="calculation__input-label">
+                    <label class="label-radio__item"> Так
+                        <input class="calculation__checkbox" type="radio" id="radio-yes" value="1" checked onclick="radioBtnAction()" >
+                    </label>
+                    <label> Ні
+                        <input class="calculation__checkbox" type="radio" id="radio-no" value="0" onclick="radioBtnAction()">
+                    </label>
+                </div>
             </div>
-            <button class="calculation__submit-btn" type="button" id="submit-btn" onclick="calculationAction()" >Обчислити</button>
+            <button class="calculation__btn" type="button" id="submit-btn" onclick="calculationAction()" >Обчислити</button>
             <p class="calculation__result" id="calculation-result"></p>
         </fieldset>
     </form>

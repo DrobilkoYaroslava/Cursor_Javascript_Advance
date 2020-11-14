@@ -41,6 +41,10 @@ function radioBtnAction(){
     activeRadioBtn.checked = true;
 }
 function numberValidation(startNumber, finishNumber){
+    if(startNumber === "" || finishNumber === ""){
+        alert(`Введіть числа!`);
+        return false;
+    }
     if (!Number.isInteger(parseFloat(startNumber))){
         alert(`${startNumber} - Це не ціле число!`);
         return false; 
