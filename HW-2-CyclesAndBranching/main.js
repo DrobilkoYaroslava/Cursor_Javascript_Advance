@@ -19,12 +19,15 @@ function getSum(startNumber, finishNumber, isEven){
         return sum;
     }
     for(let i = startNumber; i <= finishNumber; i++){
-        if (isEven == true){
-            sum = sum + i;
-        } else {
-            if (i % 2 == 1){
+        switch(i % 2){
+            case 0:
+                if (isEven == true){
+                    sum = sum + i;
+                }
+            break;
+            default:
                 sum = sum + i;
-            }
+            break;
         }
     }
     return sum;
