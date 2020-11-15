@@ -4,11 +4,11 @@ const result = document.querySelector("#calculation-result");
 let isEven = true;
 
 function calculationAction(){
-    let isNumber = numberValidation(startNumber.value, finishNumber.value); 
-    if (isNumber === true){
-        let startInt = parseInt(startNumber.value);
-        let finishInt = parseInt(finishNumber.value);
-        let sum = getSum(startInt, finishInt, isEven);
+    const isNumber = numberValidation(startNumber.value, finishNumber.value); 
+    if (isNumber){
+        const startInt = parseInt(startNumber.value);
+        const finishInt = parseInt(finishNumber.value);
+        const sum = getSum(startInt, finishInt, isEven);
         displayResult(sum);
     }
 }
@@ -19,16 +19,20 @@ function getSum(startNumber, finishNumber, isEven){
         return sum;
     }
     for(let i = startNumber; i <= finishNumber; i++){
-        switch(i % 2){
-            case 0:
-                if (isEven === true){
-                    sum = sum + i;
-                }
-            break;
-            default:
-                sum = sum + i;
-            break;
+        // switch(i % 2){
+        //     case 0:
+        //         if (isEven){
+        //             sum = sum + i;
+        //         }
+        //     break;
+        //     default:
+        //         sum = sum + i;
+        //     break;
+        // }
+        if(!isEven && i % 2 === 0 ){
+            continue;
         }
+        sum = sum + i;
     }
     return sum;
 }
@@ -36,10 +40,10 @@ function displayResult(text){
     result.innerHTML = `${text}`;
 }
 function radioBtnAction(){
-    let radioBtnArray = document.querySelectorAll(".calculation__checkbox");
+    const radioBtnArray = document.querySelectorAll(".calculation__checkbox");
     radioBtnArray.forEach(element => element.checked = false);
     
-    let activeRadioBtn = event.target;
+    const activeRadioBtn = event.target;
     isEven = parseInt(activeRadioBtn.value) === 1;
     activeRadioBtn.checked = true;
 }
