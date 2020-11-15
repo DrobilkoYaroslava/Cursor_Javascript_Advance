@@ -12,20 +12,20 @@ const buyAllAmountItem = document.querySelector("#buy-all-amount");
 const buyAllWithoutCoinsAmountItem = document.querySelector("#buy-all-without-coins-amount");
 const buyAllWithDiscountAmountItem = document.querySelector("#buy-all-with-discount-amount");
 
-let finalDiscountPercent = MIN_DISCOUNT_PERCENT + (MAX_DISCOUNT_PERCENT - MIN_DISCOUNT_PERCENT) * Math.random();
-let discountAmount = FULL_AMOUNT * finalDiscountPercent;
-let finalDiscountAmount = (FULL_AMOUNT - discountAmount).toFixed(2);
-let displayPercent = Math.trunc( parseFloat(finalDiscountPercent.toFixed(2)) * 100);
-let buyAllWithDiscountAmountTotal = `Ваша супер скидка: ${displayPercent} %!!! Итоговая сумма: ${finalDiscountAmount} грн`;
+const finalDiscountPercent = MIN_DISCOUNT_PERCENT + (MAX_DISCOUNT_PERCENT - MIN_DISCOUNT_PERCENT) * Math.random();
+const discountAmount = FULL_AMOUNT * finalDiscountPercent;
+const finalDiscountAmount = (FULL_AMOUNT - discountAmount).toFixed(2);
+const displayPercent = Math.trunc( parseFloat(finalDiscountPercent.toFixed(2)) * 100);
+const buyAllWithDiscountAmountTotal = `Ваша супер скидка: ${displayPercent} %!!! Итоговая сумма: ${finalDiscountAmount} грн`;
 
 priceWomanBoxItem.innerHTML = PRICE_WOMAN_BOX + " " + "грн";
-priceHairBoxItem.innerHTML =PRICE_HAIR_BOX + " " + "грн";
-priceManBoxItem.innerHTML =PRICE_MAN_BOX + " " + "грн";
+priceHairBoxItem.innerHTML = PRICE_HAIR_BOX + " " + "грн";
+priceManBoxItem.innerHTML = PRICE_MAN_BOX + " " + "грн";
 buyAllWithDiscountAmountItem.innerHTML = buyAllWithDiscountAmountTotal;
 
 buyAllAmountItem.innerHTML = FULL_AMOUNT + " " + "грн";
 buyAllWithoutCoinsAmountItem.innerHTML = ( Math.floor(PRICE_WOMAN_BOX) + Math.floor(PRICE_HAIR_BOX) + Math.floor(PRICE_MAN_BOX)) + " " + "грн";
 
 function contactAction() {
-    let userContact = prompt ("Оставьте ваш номер телефона", " ")
+    const userContact = prompt ("Оставьте ваш номер телефона", " ")
 }

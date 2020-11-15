@@ -61,9 +61,10 @@ body {
     color: #fff;
     outline: none;
     cursor: pointer;
+    transition: width 0.5s linear ;
 }
 .products-container__btn:hover {
-    transform: scale(1.2);
+    width: 230px;
 }
 .special-offer__heading {
     font-size: 25px;
