@@ -1,0 +1,119 @@
+@import "sprite.css";
+body {
+    background-color: #ffed9e;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.function__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.arrow {
+    font-size: 30px;
+}
+.function__description, .function__result, .function__btn {
+    width: 300px;
+    height: 200px;
+    border: 3px solid #b50000;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lobster', cursive;
+    font-size: 22px;
+    padding: 20px;
+    margin: 20px;
+}
+.function__btn {
+    border: none;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 2px 1px 22px 10px #b50000;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px,#ffdd47 0px 0px 20px, #ffdd47 0px 0px 30px, #ffdd47 0px 0px 40px,#ffdd47 0px 0px 50px, #ffdd47 0px 0px 75px;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Lobster', cursive;
+    font-size: 35px;
+}
+.click {
+    color: #b50000;
+    font-size: 22px;
+}
+.link {
+    color: blue;
+    
+}
+@media (max-width: 1000px){
+    .function__btn {
+        font-size: 16px;
+    }
+    .click {
+        font-size: 14px;
+    }
+    .function__description, .function__result, .function__btn {
+        font-size: 17px;
+    }
+    .bg-pngegg__1_ {
+        width: 70px; height: 102px;
+        background: url('../img/768px/css_sprites(2).png') -15px -860px;
+    }
+    .bg-pngegg__2_ {
+        width: 70px; height: 66px;
+        background: url('../img/768px/css_sprites(2).png') -15px -199px;
+    }
+    .bg-pngegg__4_ {
+        width: 70px; height: 110px;
+        background: url('../img/768px/css_sprites(2).png') -15px -992px;
+    }
+    .bg-pngegg__5_ {
+        width: 70px; height: 95px;
+        background: url('../img/768px/css_sprites(2).png') -15px -1580px;
+    }
+    .bg-pngegg__7_ {
+        width: 70px; height: 91px;
+        background: url('../img/768px/css_sprites(2).png') -15px -739px;
+    }
+    .bg-pngegg__6_ {
+        width: 70px; height: 69px;
+        background: url('../img/768px/css_sprites(2).png') -15px -295px;
+    }
+    .bg-pngegg__11_ {
+        width: 70px; height: 114px;
+        background: url('../img/768px/css_sprites(2).png') -15px -1132px;
+    }
+    .bg-pngegg__12_ {
+        width: 70px; height: 87px;
+        background: url('../img/768px/css_sprites(2).png') -15px -505px;
+    }
+    .bg-pngegg__13_ {
+        width: 70px; height: 120px;
+        background: url('../img/768px/css_sprites(2).png') -15px -1276px;
+    }
+    .bg-pngegg__14_ {
+        width: 70px; height: 151px;
+        background: url('../img/768px/css_sprites(2).png') -15px -1747px;
+    }
+    .bg-pngegg__15_ {
+        width: 70px; height: 61px;
+        background: url('../img/768px/css_sprites(2).png') -15px -15px;
+    }
+    .bg-pngegg__16_ {
+        width: 70px; height: 87px;
+        background: url('../img/768px/css_sprites(2).png') -15px -622px;
+    }
+    .bg-pngegg__18_ {
+        width: 70px; height: 81px;
+        background: url('../img/768px/css_sprites(2).png') -15px -394px;
+    }
+    .bg-pngegg__19_ {
+        width: 70px; height: 63px;
+        background: url('../img/768px/css_sprites(2).png') -15px -106px;
+    }
+    .bg-pngegg {
+        width: 70px; height: 97px;
+        background: url('../img/768px/css_sprites(2).png') -15px -1428px;
+    }
+}
