@@ -1,0 +1,21 @@
+    Ця функція отримує будь-яке число та виводить найбільшу цифру в цьому числі.
+
+    function getMaxDigit(numberStr){
+    let numberArray = [];
+    charArray.forEach(function(char){
+        numberArray.push(parseInt(char));
+    });
+    const maxDigit = Math.max(...numberArray.filter(element => !Number.isNaN(element)));
+    return maxDigit;
+    }
+    Ця функція видаляє з речення букви, які зустрічаються більше 1 разу. (не допрацьована)
+    function deleteDuplicateLetter(duplicateLetter){
+    const convertDublicateLetter = duplicateLetter.toLowerCase().split(" ").join("").split("");
+    let unique = "";
+    for(let i = 0; i < convertDublicateLetter.length; i++){
+        if(convertDublicateLetter.lastIndexOf(convertDublicateLetter[i]) == convertDublicateLetter.indexOf(convertDublicateLetter[i])){
+            unique += convertDublicateLetter[i];
+        }
+    }
+    return unique;
+    }
