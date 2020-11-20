@@ -79,7 +79,7 @@ function getRandomNumber(numberStart, numberFinish){
 function countLetterRepeat(word, letter){
     let resultCount = 0;
     for (let i = 0; i < word.length; i++) {
-    if (word[i] === letter) resultCount++;
+    if (word[i].toLowerCase() === letter.toLowerCase()) resultCount++;
     }
     return resultCount;
 }
