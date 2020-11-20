@@ -1,26 +1,40 @@
 const buttonArray = document.querySelectorAll(".function__btn");
 const resultArray = document.querySelectorAll(".function__result");
 const regularNumberExpression = /^[0-9]+$/;
+const kTryAgain = `try again`;
 
+function checkData(numberArr, errorMsg){
+    let isValid = true;
+    for(let i = 0; i < numberArr.length; i++){
+        const numberStr = numberArr[i];
+        if(!regularNumberExpression.test(numberStr)){
+            alert(errorMsg);
+            isValid = false;
+            if(!isValid){
+                break;
+            }
+        }
+    }
+    return isValid; 
+}
 function getMaxDigit(numberStr){
-    if(!regularNumberExpression.test(numberStr)){
-        alert(`Введіть тільки числа!`);
-        return `try again`;
+    if(!checkData([numberStr], `Введіть тільки числа!`)){
+        return kTryAgain;
     } 
     const charArray = numberStr.split("");
-    let numberArray = [];
+    let maxValue = 0;
     charArray.forEach(function(char){
-        numberArray.push(parseInt(char));
+        if(maxValue < parseInt(char)){
+            maxValue = parseInt(char);
+        }
     });
-    const maxDigit = Math.max(...numberArray.filter(element => !Number.isNaN(element)));
-    return maxDigit;
+    return maxValue;
 }
 function raiseToPower(numberEl, numberPow){
     let result = numberEl;
-    if(!regularNumberExpression.test(numberEl) || !regularNumberExpression.test(numberPow)){
-        alert(`Введіть числа!`);
-        return `try again`;
-    }
+    if(!checkData([numberEl, numberPow], `Введіть числа!`)){
+        return kTryAgain;
+    } 
     for (let i = 1; i < numberPow; i++){
         result = result * numberEl;
     }
@@ -38,17 +52,15 @@ function formatName(nameStr){
     return nameStr[0].toUpperCase() + nameStr.slice(1).toLowerCase();
 }
 function calculateTax(salary, tax){
-    if(!regularNumberExpression.test(salary)){
-        alert(`Введіть тільки числа!`);
-        return `try again`;
-    } 
+    if(!checkData([salary], `Введіть тільки числа!`)){
+        return kTryAgain;
+    }
     const calcFinalSalary = salary - (salary / 100 * tax);
     return `${calcFinalSalary} грн.`;
 }
 function getRandomNumber(numberStart, numberFinish){
-    if(!regularNumberExpression.test(numberStart) || !regularNumberExpression.test(numberFinish)){
-        alert(`Введіть тільки цілі числа!`);
-        return `try again`;
+    if(!checkData([numberStart, numberFinish], `Введіть тільки цілі числа!`)){
+        return kTryAgain;
     } 
     numberStart = Math.ceil(numberStart);
     numberFinish = Math.floor(numberFinish);
@@ -77,12 +89,11 @@ function convertCurrency (userSum){
     return convertResult;
 }
 function getRandomPassword(userPassword){
+    if(!checkData([userPassword], `Введіть тільки ціле число!`)){
+        return kTryAgain;
+    }
     let password = "";
     let symbols = "0123456789";
-    if(!regularNumberExpression.test(userPassword)){
-        alert(`Введіть тільки число!`);
-        return `try again`;
-    } 
     if (userPassword === 0) userPassword = 8;
     for (let i = 0; i < userPassword; i++){
         password += symbols.charAt(Math.floor(Math.random() * symbols.length));
