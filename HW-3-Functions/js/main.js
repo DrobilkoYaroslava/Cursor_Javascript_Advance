@@ -2,6 +2,10 @@ const buttonArray = document.querySelectorAll(".function__btn");
 const resultArray = document.querySelectorAll(".function__result");
 
 function getMaxDigit(numberStr){
+    if(!/^[0-9]+$/.test(numberStr)){
+        alert(`Введіть тільки числа!`);
+        return `try again`;
+    } 
     const charArray = numberStr.split("");
     let numberArray = [];
     charArray.forEach(function(char){
@@ -22,6 +26,10 @@ function raiseToPower(numberEl, numberPow){
     return result;
 }
 function formatName(nameStr){
+    if(/^[0-9]+$/.test(nameStr)){
+        alert(`Введіть ім'я!`);
+        return `try again`;
+    } 
     if(!nameStr){
         alert(`Введіть ім'я!`);
         return `try again`;
@@ -29,10 +37,18 @@ function formatName(nameStr){
     return nameStr[0].toUpperCase() + nameStr.slice(1).toLowerCase();
 }
 function calculateTax(salary, tax){
+    if(!/^[0-9]+$/.test(salary)){
+        alert(`Введіть тільки числа!`);
+        return `try again`;
+    } 
     const calcFinalSalary = salary - (salary / 100 * tax);
     return `${calcFinalSalary} грн.`;
 }
 function getRandomNumber(numberStart, numberFinish){
+    if(!/^[0-9]+$/.test(numberStart) || !/^[0-9]+$/.test(numberFinish)){
+        alert(`Введіть тільки цілі числа!`);
+        return `try again`;
+    } 
     numberStart = Math.ceil(numberStart);
     numberFinish = Math.floor(numberFinish);
     const randomNumber = Math.floor(Math.random() * (numberFinish - numberStart + 1)) + numberStart;
@@ -62,6 +78,10 @@ function convertCurrency (userSum){
 function getRandomPassword(userPassword){
     let password = "";
     let symbols = "0123456789";
+    if(!/^[0-9]+$/.test(userPassword)){
+        alert(`Введіть тільки число!`);
+        return `try again`;
+    } 
     if (userPassword === 0) userPassword = 8;
     for (let i = 0; i < userPassword; i++){
         password += symbols.charAt(Math.floor(Math.random() * symbols.length));
@@ -97,7 +117,6 @@ function deleteDuplicateLetter(duplicateLetter){
     //     }
     // }
     // return unique;
-
 }
 
 buttonArray.forEach(function(btn, index){
