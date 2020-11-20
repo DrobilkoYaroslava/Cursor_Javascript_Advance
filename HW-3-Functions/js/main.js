@@ -111,13 +111,6 @@ function deleteDuplicateLetter(duplicateLetter){
         }
     });
     return result.join("");
-    // let unique = "";
-    // for(let i = 0; i < convertDublicateLetter.length; i++){
-    //     if(convertDublicateLetter.lastIndexOf(convertDublicateLetter[i]) == convertDublicateLetter.indexOf(convertDublicateLetter[i])){
-    //         unique += convertDublicateLetter[i];
-    //     }
-    // }
-    // return unique;
 }
 
 buttonArray.forEach(function(btn, index){
