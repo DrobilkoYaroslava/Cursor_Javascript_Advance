@@ -1,8 +1,9 @@
 const buttonArray = document.querySelectorAll(".function__btn");
 const resultArray = document.querySelectorAll(".function__result");
+const regularNumberExpression = /^[0-9]+$/;
 
 function getMaxDigit(numberStr){
-    if(!/^[0-9]+$/.test(numberStr)){
+    if(!regularNumberExpression.test(numberStr)){
         alert(`Введіть тільки числа!`);
         return `try again`;
     } 
@@ -16,7 +17,7 @@ function getMaxDigit(numberStr){
 }
 function raiseToPower(numberEl, numberPow){
     let result = numberEl;
-    if(!/^[0-9]+$/.test(numberEl) || !/^[0-9]+$/.test(numberPow)){
+    if(!regularNumberExpression.test(numberEl) || !regularNumberExpression.test(numberPow)){
         alert(`Введіть числа!`);
         return `try again`;
     }
@@ -26,7 +27,7 @@ function raiseToPower(numberEl, numberPow){
     return result;
 }
 function formatName(nameStr){
-    if(/^[0-9]+$/.test(nameStr)){
+    if(regularNumberExpression.test(nameStr)){
         alert(`Введіть ім'я!`);
         return `try again`;
     } 
@@ -37,7 +38,7 @@ function formatName(nameStr){
     return nameStr[0].toUpperCase() + nameStr.slice(1).toLowerCase();
 }
 function calculateTax(salary, tax){
-    if(!/^[0-9]+$/.test(salary)){
+    if(!regularNumberExpression.test(salary)){
         alert(`Введіть тільки числа!`);
         return `try again`;
     } 
@@ -45,7 +46,7 @@ function calculateTax(salary, tax){
     return `${calcFinalSalary} грн.`;
 }
 function getRandomNumber(numberStart, numberFinish){
-    if(!/^[0-9]+$/.test(numberStart) || !/^[0-9]+$/.test(numberFinish)){
+    if(!regularNumberExpression.test(numberStart) || !regularNumberExpression.test(numberFinish)){
         alert(`Введіть тільки цілі числа!`);
         return `try again`;
     } 
@@ -78,7 +79,7 @@ function convertCurrency (userSum){
 function getRandomPassword(userPassword){
     let password = "";
     let symbols = "0123456789";
-    if(!/^[0-9]+$/.test(userPassword)){
+    if(!regularNumberExpression.test(userPassword)){
         alert(`Введіть тільки число!`);
         return `try again`;
     } 
@@ -126,7 +127,7 @@ buttonArray.forEach(function(btn, index){
 buttonArray.forEach(btn => btn.onclick = function(){
     switch(this.id){
         case "0" : 
-            const numberStr = prompt("Введіть будь-яке число!");
+            const numberStr = prompt("Введіть будь-яке число, наприклад '25982!");
             resultArray[0].innerHTML = `Результат: ${getMaxDigit(numberStr)}`;
         break;
         case "1" :
