@@ -88,13 +88,13 @@ function convertCurrency (userSum){
     }
     return convertResult;
 }
-function getRandomPassword(userPassword){
+function getRandomPassword(userPassword = 8){
     if(!checkData([userPassword], `Введіть тільки ціле число!`)){
         return kTryAgain;
     }
     let password = "";
     let symbols = "0123456789";
-    if (userPassword === 0) userPassword = 8;
+    if (userPassword === '0') userPassword = 8;
     for (let i = 0; i < userPassword; i++){
         password += symbols.charAt(Math.floor(Math.random() * symbols.length));
     }
