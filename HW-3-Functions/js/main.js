@@ -1,13 +1,12 @@
-const buttonArray = document.querySelectorAll(".function__btn");
-const resultArray = document.querySelectorAll(".function__result");
-const regularNumberExpression = /^[0-9]+$/;
+const buttonsArray = document.querySelectorAll(".function__btn");
+const resultsArray = document.querySelectorAll(".function__result");
 const kTryAgain = `try again`;
 
 function checkData(numberArr, errorMsg){
     let isValid = true;
     for(let i = 0; i < numberArr.length; i++){
-        const numberStr = numberArr[i];
-        if(!regularNumberExpression.test(numberStr)){
+        const numberStr = +numberArr[i];
+        if(!Number.isInteger(numberStr)){
             alert(errorMsg);
             isValid = false;
             if(!isValid){
@@ -31,14 +30,24 @@ function getMaxDigit(numberStr){
     return maxValue;
 }
 function raiseToPower(numberEl, numberPow){
-    let result = numberEl;
+    let result = 1;
+    let increaseArr = [];
     if(!checkData([numberEl, numberPow], `Введіть числа!`)){
         return kTryAgain;
     } 
-    for (let i = 1; i < numberPow; i++){
-        result = result * numberEl;
+    if(!+numberPow) return result;
+    const isPositivePow = parseInt(numberPow) > 0;
+    for(let i = 0; i < Math.abs(numberPow); i++){
+        increaseArr.push(+numberEl);
     }
-    return result;
+    increaseArr.forEach(function(numb){
+        result = result * numb;
+    });
+    if(isPositivePow){
+        return result;
+    } else{
+        return 1 / result; 
+    }
 }
 function formatName(nameStr){
     if(regularNumberExpression.test(nameStr)){
@@ -62,9 +71,9 @@ function getRandomNumber(numberStart, numberFinish){
     if(!checkData([numberStart, numberFinish], `Введіть тільки цілі числа!`)){
         return kTryAgain;
     } 
-    numberStart = Math.ceil(numberStart);
-    numberFinish = Math.floor(numberFinish);
-    const randomNumber = Math.floor(Math.random() * (numberFinish - numberStart + 1)) + numberStart;
+    const numberStartPoint = Math.ceil(numberStart);
+    const numberFinishPoint = Math.floor(numberFinish);
+    const randomNumber = Math.floor(Math.random() * (numberFinishPoint - numberStartPoint + 1)) + numberStartPoint;
     return randomNumber;
 }
 function countLetterRepeat(word, letter){
@@ -104,11 +113,8 @@ function deleteLetters(sentence, userLetter){
     return sentence.split(userLetter).join("");
 }
 function isPalindrome(palindrome = ""){
-    let value = "";
-    for (let i = palindrome.length - 1; i >= 0; i--){
-        value = value + palindrome[i];
-    }
-    return value.split(" ").join("").toLowerCase() === palindrome.split(" ").join("").toLowerCase();
+    const palindromReverseWord = palindrome.split('').reverse().join('');
+    return palindromReverseWord.split(" ").join("").toLowerCase() === palindrome.split(" ").join("").toLowerCase();
 }
 function deleteDuplicateLetter(duplicateLetter){
     const convertDublicateLetter = duplicateLetter.toLowerCase().split(" ").join("").split("");
@@ -124,60 +130,60 @@ function deleteDuplicateLetter(duplicateLetter){
     return result.join("");
 }
 
-buttonArray.forEach(function(btn, index){
+buttonsArray.forEach(function(btn, index){
     btn.setAttribute("id", `${index}`);
 });
 
-buttonArray.forEach(btn => btn.onclick = function(){
+buttonsArray.forEach(btn => btn.onclick = function(){
     switch(this.id){
         case "0" : 
             const numberStr = prompt("Введіть будь-яке число, наприклад '25982!");
-            resultArray[0].innerHTML = `Результат: ${getMaxDigit(numberStr)}`;
+            resultsArray[0].innerHTML = `Результат: ${getMaxDigit(numberStr)}`;
         break;
         case "1" :
             const numberEl = prompt("Введіть будь-яке число!");
             const numberPow = prompt("Введіть до якого ступеня!");
-            resultArray[1].innerHTML = `Результат: ${raiseToPower(numberEl, numberPow)}`;
+            resultsArray[1].innerHTML = `Результат: ${raiseToPower(numberEl, numberPow)}`;
         break;
         case "2" : 
             const nameStr = prompt("Напишіть ім'я з маленької букви!");
-            resultArray[2].innerHTML = `Результат: ${formatName(nameStr)}`;
+            resultsArray[2].innerHTML = `Результат: ${formatName(nameStr)}`;
         break;
         case "3" : 
             const salary = prompt("Заробітна плата");
             const tax = 18 + 1.5;
-            resultArray[3].innerHTML = `Результат: ${calculateTax(salary, tax)}`;
+            resultsArray[3].innerHTML = `Результат: ${calculateTax(salary, tax)}`;
         break;
         case "4" : 
             const numberStart = prompt("Введіть перше число діапазону");
             const numberFinish = prompt("Введіть останнє число діапазону");
-            resultArray[4].innerHTML = `Результат: ${getRandomNumber(numberStart, numberFinish)}`;
+            resultsArray[4].innerHTML = `Результат: ${getRandomNumber(numberStart, numberFinish)}`;
         break;
         case "5" : 
             const word = prompt("Введіть слово");
             const letter = prompt("Введіть букву");
-            resultArray[5].innerHTML = `Результат: ${countLetterRepeat(word, letter)}`;
+            resultsArray[5].innerHTML = `Результат: ${countLetterRepeat(word, letter)}`;
         break;
         case "6" : 
             const userSum = prompt("Введіть суму в $ або uah (Наприклад: 500$; 200uah)");
-            resultArray[6].innerHTML = `Результат: ${convertCurrency (userSum)}`;
+            resultsArray[6].innerHTML = `Результат: ${convertCurrency (userSum)}`;
         break;
         case "7" : 
             let userPassword = prompt("Нажміть Enter для генерації рандомного пароля (8 символів за замовчуванням), або введіть потрібну кількість символів", "8");
-            resultArray[7].innerHTML = `Результат: ${getRandomPassword(userPassword)}`;
+            resultsArray[7].innerHTML = `Результат: ${getRandomPassword(userPassword)}`;
         break;
         case "8" : 
             const sentence = prompt("Введіть будь-яке речення");
             const userLetter = prompt("Введіть букву, яку бажаєте видалити");
-            resultArray[8].innerHTML = `Результат: ${deleteLetters(sentence, userLetter)}`;
+            resultsArray[8].innerHTML = `Результат: ${deleteLetters(sentence, userLetter)}`;
         break;
         case "9" : 
             const palindrome = prompt("Введіть слово");
-            resultArray[9].innerHTML = `Результат: ${isPalindrome(palindrome) ? 'це паліндром' : 'це не паліндром'}`;
+            resultsArray[9].innerHTML = `Результат: ${isPalindrome(palindrome) ? 'це паліндром' : 'це не паліндром'}`;
         break;
         default: 
             const duplicateLetter = prompt("Введіть речення");
-            resultArray[10].innerHTML = `Результат: ${deleteDuplicateLetter(duplicateLetter)}`;
+            resultsArray[10].innerHTML = `Результат: ${deleteDuplicateLetter(duplicateLetter)}`;
         break;
     }
 })
