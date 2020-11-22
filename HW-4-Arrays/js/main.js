@@ -91,10 +91,3 @@ console.log(pairsArr);
 console.log(pairsWithThemes);
 console.log(marksToStudents);
 console.log(pairsWithRandomMarks);
-
-
-
-// pairsSel.innerHTML = makePairsStrArr(pairsArr);
-// themesSel.innerHTML = pairsWithThemes;
-// studentMarkSel.innerHTML = marksToStudents;
-// pairMarkSel.innerHTML = pairsWithRandomMarks;
