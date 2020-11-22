@@ -1,0 +1,41 @@
+body {
+    max-width: 1440px;
+    background:radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,0.2595413165266106) 100%), #f7e8ff url(../img/pngwing-bg.png) top right / 35% no-repeat;
+    font-family: 'Amatic SC', cursive;
+}
+.page__wrapper {
+    margin-left: 5rem;
+}
+.page__title {
+    font-size: 4rem;
+    text-align: center;
+}
+.projects {
+    width: 100%;
+    display: grid;
+    grid: auto / 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+.projects__item {
+    display: grid;
+    grid: none / 50% 50%;
+    column-gap: 2rem;
+    align-items: center;
+}
+.projects__img {
+    width: 100%;
+}
+.projects__item-title {
+    font: 700 1.7rem 'Amatic SC', cursive;
+}
+.projects__info {
+    width: 16rem;
+    height: 15rem;
+    border: 2px dotted #9535cc;
+    border-radius: 4px;
+    font: 700 1.3rem / 2.5rem 'Amatic SC', cursive;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 10px;
+}
