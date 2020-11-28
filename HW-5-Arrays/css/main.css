@@ -1,0 +1,30 @@
+body {
+    max-width: 1440px;
+    box-sizing: border-box;
+    background-color: brown;
+}
+.wrapper {
+    margin: 0 auto;
+}
+.function {
+    width: 500px;
+    height: 500px;
+    border: 3px solid #000;
+    border-radius: 8px;
+    background-color: burlywood;
+    margin: 0 auto;
+}
+.function-title {
+}
+.function-description {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #000;
+    border-radius: 8px;
+}
+.function-result {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #000;
+    border-radius: 8px;
+}
