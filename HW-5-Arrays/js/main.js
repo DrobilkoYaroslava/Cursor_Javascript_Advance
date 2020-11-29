@@ -1,4 +1,3 @@
-
 const getRandomArray = (length = 15, min = 1, max = 100) => {
     const resultArr = [];
     for(let i = 0; i < length; i++){
@@ -8,10 +7,9 @@ const getRandomArray = (length = 15, min = 1, max = 100) => {
     return resultArr;
 }
 
-
 const workArr = getRandomArray();
 
-const getModa = (numbers) => {
+const getMode = (numbers) => {
     const resultArr = [];
     numbers.forEach((number) => {
         const dublicateArr = numbers.filter(numberEl => number === numberEl);
@@ -110,7 +108,7 @@ const generateCombinations = (word) => {
 }
 
 console.log(workArr);
-console.log(getModa(workArr));
+console.log(getMode(workArr));
 console.log(getAverage(workArr));
 console.log(getMedian(workArr));
 console.log(filterEvenNumbers(workArr));

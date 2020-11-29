@@ -3,70 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <title>HW-5-Arrays</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="function">
-            <form action="#" id="form1">
+            <!-- <form action="#" id="form1"> -->
                 <h2 class="function-title">Функція №1</h2>
-                <p class="function-description">Ця функція повертає масив випадкових цілих чисел.</p>
+                <p class="function-description">Ця функція повертає масив випадкових цілих чисел. <br>
+                    <span class="alert">Бажано, щоб перше число було не менше 15.</span>
+                </p>
                 <input type="number" class="function-input" id="length" placeholder="введіть довжину масиву" value=""><label for="length"></label> 
                 <input type="number" class="function-input" id="min-value" placeholder="введіть початкове число"  value=""><label for="min-value"></label> 
                 <input type="number" class="function-input" id="max-value" placeholder="введіть останнє число"  value=""><label for="max-value"></label>
                 <button type="submit" class="function-btn" onclick="clickNumberAction()">Result</button>
                 <p class="function-result"></p>
-            </form>
+            <!-- </form> -->
         </div>
         <div class="function">
-            <h2 class="function-title">Функція</h2>
-            <p class="function-description"></p>
+            <h2 class="function-title">Функція №2</h2>
+            <p class="function-description">Ця функція вираховує моду всіх переданих в неї аргументів.</p>
+            <img class="page-img" src="img/Mode.jpg" alt="пояснення терміну 'мода'">
             <p class="function-result"></p>
         </div>
         <div class="function">
-            <h2 class="function-title">Функція</h2>
-            <p class="function-description"></p>
+            <h2 class="function-title">Функція №3</h2>
+            <p class="function-description">Ця функція рахує середнє арифметичне всіх переданих в неї аргументів.</p>
+            <img class="page-img" src="img/Mean.jpg" alt="пояснення терміну 'середнє арифметичне'">
             <p class="function-result"></p>
         </div>
         <div class="function">
-            <h2 class="function-title">Функція</h2>
-            <p class="function-description"></p>
+            <h2 class="function-title">Функція №4</h2>
+            <p class="function-description">Ця функція рахує медіану всіх переданих в неї аргументів.
+                <img class="page-img-median" src="img/545a489badf2eb8c466ca3335f5d63c0.png" alt="пояснення терміну 'медіана'">
+            </p>
             <p class="function-result"></p>
         </div>
         <div class="function">
-            <h2 class="function-title">Функція</h2>
-            <p class="function-description"></p>
+            <h2 class="function-title">Функція №5</h2>
+            <p class="function-description">Ця функція фільтрує парні числа передані як аргументи функції.</p>
             <p class="function-result"></p>
         </div>
         <div class="function">
-            <h2 class="function-title">Функція</h2>
-            <p class="function-description"></p>
+            <h2 class="function-title">Функція №6</h2>
+            <p class="function-description">Ця функція порахує кількість чисел більших 0.</p>
             <p class="function-result"></p>
         </div>
         <div class="function">
-            <h2 class="function-title">Функція</h2>
-            <p class="function-description"></p>
+            <h2 class="function-title">Функція №7</h2>
+            <p class="function-description">Ця функція відфільтрує усі елементи в масиві та залишить тільки ті, які діляться на ціло на 5.</p>
+            <img class="page-img-five" src="img/FSS016DHZS8XCJH.png" alt="смайлик думає над прикладом">
             <p class="function-result"></p>
         </div>
         <div class="function">
-            <h2 class="function-title">Функція</h2>
-            <p class="function-description"></p>
-            <input type="text" class="function-input" id="bad-word-value" placeholder="введіть останнє число"><label for="bad-word-value"></label>
+            <h2 class="function-title">Функція №8</h2>
+            <p class="function-description">Ця функція 1) розіб'є фразу на слова, 2) замінить погані слова на зірочки (*).
+                <span class="example"> Приклад: 'Are you fucking kidding?', 'Holy shit!'</span>
+                <span class="alert">Наразі доступні для заміни слова лише "shit", "fuck".</span> 
+            </p>
+            <input type="text" class="function-input" id="bad-word-value" placeholder="речення з нецензурною лайкою"><label for="bad-word-value"></label>
                 <button type="submit" class="function-btn" onclick="clickBadWordsAction()">Result</button>
             <p class="function-result"></p>
         </div>
         <div class="function">
-            <h2 class="function-title">Функція</h2>
-            <p class="function-description"></p>
-            <input type="text" class="function-input" id="divide-by-syllable-value" placeholder="введіть останнє число"><label for="divide-by-syllable"></label>
+            <h2 class="function-title">Функція №9</h2>
+            <p class="function-description">Ця функція розбиває кожне слово на умовні склади по 3 букви. </p>
+            <input type="text" class="function-input" id="divide-by-syllable-value" placeholder="введіть довге слово"><label for="divide-by-syllable"></label>
             <button type="submit" class="function-btn" onclick="clickDivideByThreeAction()">Result</button>
             <p class="function-result"></p>
         </div>
         <div class="function">
-            <h2 class="function-title">Функція</h2>
-            <p class="function-description"></p>
-            <input type="text" class="function-input" id="combinations" placeholder="введіть останнє число"><label for="combinations"></label>
+            <h2 class="function-title">Функція №10</h2>
+            <p class="function-description">Ця функція видасть всі можливі перестановки(унікальні, без повторень) букв в слові.</p>
+            <input type="text" class="function-input" id="combinations" placeholder="введіть слово"><label for="combinations"></label>
             <button type="submit" class="function-btn" onclick="clickGenerateCombinationsAction()">Result</button>
             <p class="function-result"></p>
         </div>

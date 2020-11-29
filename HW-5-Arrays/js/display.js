@@ -9,8 +9,8 @@ const functionContainers = document.querySelectorAll(".function");
 
 function clickNumberAction(){
     const mainArr = getRandomArray(lengthField.value, minField.value, maxField.value);
-    resultFields[0].innerHTML = mainArr;
-    resultFields[1].innerHTML = `${getModa(mainArr).length > 0 ? getModa(mainArr) : 'Немає повторень'}`;
+    resultFields[0].innerHTML = `Масив чисел: [${mainArr}]`;
+    resultFields[1].innerHTML = `${getMode(mainArr).length > 0 ? getMode(mainArr) : 'Немає повторень'}`;
     resultFields[2].innerHTML = getAverage(mainArr);
     resultFields[3].innerHTML = getMedian(mainArr);
     resultFields[4].innerHTML = filterEvenNumbers(mainArr);
