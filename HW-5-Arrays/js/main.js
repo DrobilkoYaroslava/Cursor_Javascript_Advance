@@ -59,7 +59,8 @@ const countPositiveNumbers = (numbers) => {
     return results;
 }
 const getDividedByFive = (numbers) => {
-    return numbers.filter(number => number % 5 === 0);
+    const divideNumber = 5;
+    return numbers.filter(number => number % divideNumber === 0);
 }
 
 const badWords = ["shit", "fuck"];
