@@ -91,8 +91,10 @@ const divideByThree = (word) => {
 
 const generateCombinations = (word) => {
     if(word.length > 10) return [];
-    const fuctorialCount = (word.length - 1) * word.length;
+    const clearArr = [...new Set(word)];
+    const fuctorialCount = clearArr.length > 2 ? (word.length - 1) * word.length : word.length;
     const results = [word.toLowerCase()];
+    if(word.length === word.split("").filter(char => char === word[0]).length) return results;
     while(results.length !== fuctorialCount){
         const wordArr = word.toLowerCase().split("");
         let newWord = "";
