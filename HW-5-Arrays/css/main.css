@@ -1,10 +1,9 @@
 body {
     max-width: 1440px;
     box-sizing: border-box;
-    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,0.2231267507002801) 100%), #ffffff url(../img/brain-2062057_1920.jpg) bottom right / 50% no-repeat;
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,0.2231267507002801) 100%), #ffffff url(../img/brain-2062057_1920.jpg) bottom right / 60% no-repeat;
     font-family: 'Amatic SC', cursive;
 }
-
 .wrapper {
     margin: 3rem auto;
     display: flex;

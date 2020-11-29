@@ -14,7 +14,7 @@ function clickNumberAction(){
     resultFields[2].innerHTML = getAverage(mainArr);
     resultFields[3].innerHTML = getMedian(mainArr);
     resultFields[4].innerHTML = filterEvenNumbers(mainArr);
-    resultFields[5].innerHTML = countPositiveNumbers(mainArr);
+    resultFields[5].innerHTML = `${countPositiveNumbers(mainArr)} <br> Кількість:${countPositiveNumbers(mainArr).filter(number => number > -1).length}`;
     resultFields[6].innerHTML = getDividedByFive(mainArr);
 }
 

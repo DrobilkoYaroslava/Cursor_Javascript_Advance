@@ -12,17 +12,15 @@
 <body>
     <div class="wrapper">
         <div class="function">
-            <!-- <form action="#" id="form1"> -->
                 <h2 class="function-title">Функція №1</h2>
                 <p class="function-description">Ця функція повертає масив випадкових цілих чисел. <br>
                     <span class="alert">Бажано, щоб перше число було не менше 15.</span>
                 </p>
-                <input type="number" class="function-input" id="length" placeholder="введіть довжину масиву" value=""><label for="length"></label> 
-                <input type="number" class="function-input" id="min-value" placeholder="введіть початкове число"  value=""><label for="min-value"></label> 
-                <input type="number" class="function-input" id="max-value" placeholder="введіть останнє число"  value=""><label for="max-value"></label>
+                <input type="number" class="function-input" id="length" placeholder="введіть довжину масиву" value="15"><label for="length"></label> 
+                <input type="number" class="function-input" id="min-value" placeholder="введіть початкове число"  value="1"><label for="min-value"></label> 
+                <input type="number" class="function-input" id="max-value" placeholder="введіть останнє число"  value="100"><label for="max-value"></label>
                 <button type="submit" class="function-btn" onclick="clickNumberAction()">Result</button>
                 <p class="function-result"></p>
-            <!-- </form> -->
         </div>
         <div class="function">
             <h2 class="function-title">Функція №2</h2>
@@ -50,7 +48,7 @@
         </div>
         <div class="function">
             <h2 class="function-title">Функція №6</h2>
-            <p class="function-description">Ця функція порахує кількість чисел більших 0.</p>
+            <p class="function-description">Ця функція порахує кількість чисел більших 0. <span class="alert"> З ряду позитивних чисел робимо декілька негативнихб щоб перевірити роботу функції:</span></p>
             <p class="function-result"></p>
         </div>
         <div class="function">
@@ -72,7 +70,7 @@
         <div class="function">
             <h2 class="function-title">Функція №9</h2>
             <p class="function-description">Ця функція розбиває кожне слово на умовні склади по 3 букви. </p>
-            <input type="text" class="function-input" id="divide-by-syllable-value" placeholder="введіть довге слово"><label for="divide-by-syllable"></label>
+            <input type="text" class="function-input" id="divide-by-syllable-value" placeholder="введіть довге слово"><label for="divide-by-syllable-value"></label>
             <button type="submit" class="function-btn" onclick="clickDivideByThreeAction()">Result</button>
             <p class="function-result"></p>
         </div>

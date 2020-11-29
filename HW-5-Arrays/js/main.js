@@ -56,7 +56,7 @@ const countPositiveNumbers = (numbers) => {
     }
     const results = randomNegativeNumbers(numbers);
     console.log(results);
-    return results.filter(number => number > -1).length;
+    return results;
 }
 const getDividedByFive = (numbers) => {
     return numbers.filter(number => number % 5 === 0);
@@ -74,7 +74,8 @@ const replaceBadWords = (string) => {
 }
 
 const divideByThree = (word) => {
-    const strWithoutSpace = [...word].filter(char => char !== " ");
+    const clearWord = word.replace(/[^\w\s]|_/g, "").toLowerCase();
+    const strWithoutSpace = clearWord.split("").filter(char => char !== " ");
     const result = [];
     const syllable = strWithoutSpace.reduce((total, char) => {
         if(total.length === 3){
@@ -90,13 +91,15 @@ const divideByThree = (word) => {
 const generateCombinations = (word) => {
     if(word.length > 10) return [];
     const fuctorialCount = (word.length - 1) * word.length;
-    const results = [word];
+    const results = [word.toLowerCase()];
     while(results.length !== fuctorialCount){
-        const wordArr = word.split("");
+        const wordArr = word.toLowerCase().split("");
         let newWord = "";
         while(newWord.length !== word.length){
             const randomItem = wordArr[Math.floor(Math.random() * wordArr.length)];
-            if(!newWord.includes(randomItem)){
+            const dublicateCount = wordArr.filter(char => randomItem === char).length;
+            const existDublicateCount = newWord.split("").filter(char => randomItem === char).length
+            if(dublicateCount !== existDublicateCount){
                 newWord = newWord + randomItem;
             }
         }
