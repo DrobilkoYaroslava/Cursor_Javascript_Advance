@@ -78,5 +78,5 @@ console.log(getAverageMark(students[0]));
 console.log(getStudentInfo(students[0]));
 console.log(getStudentsNames(students));
 console.log(getBestStudent(students));
-console.log("What are you doing right now?");
-console.log(calculateWordLetters("What are you doing right now?"));
+console.log("Banana");
+console.log(calculateWordLetters("Banana"));
