@@ -25,9 +25,8 @@ const students = [{
 }];
 function getSubjectsForStudent(student){
     const subjList = Object.keys(student.subjects);
-    return subjList.map((subject) => subject[0].toUpperCase() + subject.slice(1).toLowerCase().replace("_", " "));//.join(", ");
+    return subjList.map((subject) => subject[0].toUpperCase() + subject.slice(1).toLowerCase().replace("_", " "));
 }
-console.log(getSubjectsForStudent(students[0]));
 
 function getAverageMark(student){
     const subjList = Object.keys(student.subjects);
@@ -36,13 +35,13 @@ function getAverageMark(student){
     }, 0);
     return total / subjList.length;
 }
+
 const getAverage = (numbers) => {
     const total = numbers.reduce((total, number) => {
         return total + number;
     }, 0);
     return total / numbers.length;
 }
-console.log(getAverageMark(students[0]));
 
 function getStudentInfo(student){
     const resultObj = {}
@@ -51,19 +50,16 @@ function getStudentInfo(student){
     resultObj["averageMark"] = getAverageMark(student).toFixed(2);
     return resultObj;
 }
-console.log(getStudentInfo(students[0]));
 
 function getStudentsNames(students){
     return students.map(student => student.name).sort();
 }
-console.log(getStudentsNames(students));
 
 function getBestStudent(students){
     return students.sort((a, b) => {
         return getAverageMark(a) - getAverageMark(b);
     })[students.length - 1].name;
 }
-console.log(getBestStudent(students));
 
 function calculateWordLetters(word){
     const resultObj = {};
@@ -76,4 +72,11 @@ function calculateWordLetters(word){
     });
     return resultObj;
 }
-console.log(calculateWordLetters("Are you fucking juk?"));
+
+console.log(getSubjectsForStudent(students[0]));
+console.log(getAverageMark(students[0]));
+console.log(getStudentInfo(students[0]));
+console.log(getStudentsNames(students));
+console.log(getBestStudent(students));
+console.log("What are you doing right now?");
+console.log(calculateWordLetters("What are you doing right now?"));
