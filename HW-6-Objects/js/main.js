@@ -33,7 +33,7 @@ function getAverageMark(student){
     const total = subjList.reduce((total, key) => {
         return total + getAverage(student.subjects[key]);
     }, 0);
-    return total / subjList.length;
+    return +(total / subjList.length).toFixed(2);
 }
 
 const getAverage = (numbers) => {
