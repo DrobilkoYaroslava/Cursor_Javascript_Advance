@@ -47,14 +47,17 @@ function setMarksToStudents(students = [], marks = []){
 }
 
 function setRandomMarksToPairs(pairsWithThemes = [[]]){
-    let pairsWithThemesAndMarks = [...pairsWithThemes];
+    const pairsWithThemesAndMarks = [...pairsWithThemes];
+    const maxMark = 5;
+    const minMark = 1;
     for(let i = 0; i < pairsWithThemes.length; i++){
         let itemOfPairsWithThemes = [...pairsWithThemes[i]];
-        itemOfPairsWithThemes.push(parseInt(Math.random() * (5 - 1) + 1));
+        itemOfPairsWithThemes.push(parseInt(Math.random() * (maxMark - minMark) + minMark));
         pairsWithThemesAndMarks.splice(i, 1, itemOfPairsWithThemes);
     }
     return pairsWithThemesAndMarks;
 }
+
 function displayPairs(){
     let listOfPairs = "";
     makePairsStrArr(pairsArr).forEach(function(item){
@@ -62,6 +65,7 @@ function displayPairs(){
     });
     pairsSel.innerHTML = listOfPairs;
 }
+
 function displayPairsThemes(){
     let listOfPairsThemes = "";
     for(let i = 0; i < pairsWithThemes.length; i++){
@@ -69,6 +73,7 @@ function displayPairsThemes(){
     }
     themesSel.innerHTML = listOfPairsThemes;
 }
+
 function displayStudentsMarks(){
     let listOfStudentsMarks = "";
     for(let i = 0; i < marksToStudents.length; i++){
@@ -76,6 +81,7 @@ function displayStudentsMarks(){
     }
     studentMarkSel.innerHTML = listOfStudentsMarks;
 }
+
 function displayPairsMarks(){
     let listOfPairsMarks = "";
     for(let i = 0; i < pairsWithRandomMarks.length; i++){
@@ -83,6 +89,7 @@ function displayPairsMarks(){
     }
     pairMarkSel.innerHTML = listOfPairsMarks;
 }
+
 displayPairs();
 displayPairsThemes();
 displayStudentsMarks();
