@@ -33,7 +33,7 @@ function getAverageMark(student){
     const total = subjList.reduce((total, key) => {
         return total + getAverage(student.subjects[key]);
     }, 0);
-    return +(total / subjList.length).toFixed(2);
+    return parseInt(total / subjList.length).toFixed(2);
 }
 
 const getAverage = (numbers) => {
@@ -44,10 +44,7 @@ const getAverage = (numbers) => {
 }
 
 function getStudentInfo(student){
-    const resultObj = {}
-    resultObj["course"] = student.course;
-    resultObj["name"] = student.name;
-    resultObj["averageMark"] = getAverageMark(student).toFixed(2);
+    const resultObj = {course: student.course, name: student.name, averageMark: parseInt(getAverageMark(student))};
     return resultObj;
 }
 
