@@ -1,27 +1,33 @@
+const blockWrapp = document.querySelector('#main-container');
 let blockArr = [];
+const quantityEl = 25;
+const wrappWidth = '250px';
+const sizeEl = '50px';
+const delay = 1000;
 
-function generateBlocks(blocks) {
-    blockArr = document.body.insertAdjacentHTML('beforeend', '<div id="cont">'+'<div></div>'.repeat(25)+'</div>');
+function generateBlocks() {
+    blockWrapp.innerHTML = '<div></div>'.repeat(quantityEl);
+    blockArr = document.querySelectorAll('div');
 }
 
-function generateSize(blocks) {
-    document.querySelector('#cont').style.width = 250 + 'px';
-    document.querySelectorAll('#cont>div').forEach(block => {
-        block.style.width = 50 + 'px';
+function generateSize() {
+    blockWrapp.style.width = wrappWidth;
+    blockArr.forEach(block => {
+        block.style.width = sizeEl;
     });
-    document.querySelectorAll('#cont>div').forEach(block => {
-        block.style.height = 50 + 'px';
+    blockArr.forEach(block => {
+        block.style.height = sizeEl;
     });
 }
 
-function generateBlocksRandomColor(backgroundColor){
-    document.querySelectorAll('#cont>div').forEach(block => {
+function generateBlocksRandomColor(){
+    blockArr.forEach(block => {
         block.style.backgroundColor = '#'+Math.random().toString(16).slice(2,8);
     });
 }
 
 function generateBlocksInterval() {
-    let timer = setInterval(generateBlocksRandomColor, 1000);
+    let timer = setInterval(generateBlocksRandomColor, delay);
     return timer;
 }
 

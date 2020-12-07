@@ -1,9 +1,9 @@
 body{
     background-color: #fffeb0;
 }
-#cont{
+#main-container{
     margin: 100px;
 }
-#cont > div{
+div{
     float: left;
 }
