@@ -22,13 +22,15 @@ body{
     display: inline-block;
     font-family: 'Langar', cursive;
     font-size: 40px;
+    line-height: 60px;
     text-shadow: 2px 2px 0 #f23d4c, 2px -2px 0 #f23d4c, -2px 2px 0 #f23d4c, -2px -2px 0 #f23d4c, 2px 0px 0 #f23d4c, 0px 2px 0 #f23d4c, -2px 0px 0 #f23d4c, 0px -2px 0 #f23d4c;
 }
 .page-info {
     font-family: 'Andika New Basic', sans-serif;
-    font-size: 33px;
+    font-size: 30px;
+    line-height: 40px;
     font-weight: 700;
-    text-align: end;
+    text-align: center;
     text-shadow: 2px 2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, -2px -2px 0 #fff, 2px 0px 0 #fff, 0px 2px 0 #fff, -2px 0px 0 #fff, 0px -2px 0 #fff;
 }
 .header-img-p {
