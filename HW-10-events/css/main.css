@@ -104,6 +104,9 @@ body{
     border: 2px solid #9c0e1a;
     
 }
+.audio-input:hover:after {
+    background-color: rgba(241, 74, 88, 0.5);
+}
 .audio-input:checked:after {
     background-color: #f23d4c;
 }
