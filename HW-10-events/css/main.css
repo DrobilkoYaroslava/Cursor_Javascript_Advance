@@ -1,0 +1,111 @@
+body{
+    background: #38393b url(../img/PngJoy_freddie-mercury-illustration-transparent-png_10199955.png) top right / 60% no-repeat;
+    max-width: 1440px;
+    margin: 2rem auto;
+    color: #000000;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 90%;
+}
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.header-img {
+    width: 20%;
+    margin-right: 3rem;
+}
+.title {
+    display: inline-block;
+    font-family: 'Langar', cursive;
+    font-size: 40px;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+}
+.page-info {
+    font-family: 'Andika New Basic', sans-serif;
+    font-size: 33px;
+    font-weight: 700;
+    text-align: end;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+}
+.header-img-p {
+    width: 5%;
+}
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+.audio-box {
+    width: 270px;
+    margin-bottom: 2rem;
+    padding: 10px;
+}
+.audio-wrapper{
+    cursor: pointer;
+    outline: none;
+}
+.audio-wrapper:active {
+    transform: translateY(10px);
+}
+.audio-input-box{
+    margin-top: 1.5rem;
+}
+.audio-result, .audio-name, .audio-label {
+    font-family: 'Andika New Basic', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;
+}
+.audio-label{
+    display: block;
+    font-size: 20px;
+    position: relative;
+    right: -9px;
+}
+.audio-name {
+    height: 50px;
+    font-weight: 700;
+    font-size: 22px;
+    color: #FFF;
+    background-color: rgba(247, 141, 148, 0.5);
+    border-radius: 8px;
+    margin: 10px auto;
+}
+.audio-result{
+    font-size: 22px;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+}
+.audio-input-box {
+}
+.audio-input {
+    appearance: none;
+}
+.audio-input:after {
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    top: 4px;
+    left: -15px;
+    position: absolute;
+    background-color: #fff;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #9c0e1a;
+    
+}
+.audio-input:checked:after {
+    background-color: #f23d4c;
+}
+.audio-info{
+    display: none;
+}
+
+
+
+
+
