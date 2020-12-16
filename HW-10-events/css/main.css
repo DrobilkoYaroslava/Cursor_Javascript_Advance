@@ -22,14 +22,14 @@ body{
     display: inline-block;
     font-family: 'Langar', cursive;
     font-size: 40px;
-    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+    text-shadow: 2px 2px 0 #f23d4c, 2px -2px 0 #f23d4c, -2px 2px 0 #f23d4c, -2px -2px 0 #f23d4c, 2px 0px 0 #f23d4c, 0px 2px 0 #f23d4c, -2px 0px 0 #f23d4c, 0px -2px 0 #f23d4c;
 }
 .page-info {
     font-family: 'Andika New Basic', sans-serif;
     font-size: 33px;
     font-weight: 700;
     text-align: end;
-    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+    text-shadow: 2px 2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, -2px -2px 0 #fff, 2px 0px 0 #fff, 0px 2px 0 #fff, -2px 0px 0 #fff, 0px -2px 0 #fff;
 }
 .header-img-p {
     width: 5%;
@@ -59,6 +59,7 @@ body{
     font-size: 20px;
     font-weight: 700;
     padding: 10px;
+    text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
 }
 .audio-label{
     display: block;
@@ -67,19 +68,22 @@ body{
     right: -9px;
 }
 .audio-name {
-    height: 50px;
     font-weight: 700;
     font-size: 22px;
     color: #FFF;
     background-color: rgba(247, 141, 148, 0.5);
     border-radius: 8px;
     margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 130px;
 }
 .audio-result{
+    text-align: center;
+    color: #9c0e1a;
     font-size: 22px;
-    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
-}
-.audio-input-box {
+    text-shadow: 2px 2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, -2px -2px 0 #fff, 2px 0px 0 #fff, 0px 2px 0 #fff, -2px 0px 0 #fff, 0px -2px 0 #fff;
 }
 .audio-input {
     appearance: none;
@@ -104,8 +108,17 @@ body{
 .audio-info{
     display: none;
 }
-
-
+.video-link{
+    font-size: 20px;
+    color: #000000;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: end;
+}
+.youtube{
+    width: 100px;
+    
+}
 
 
 
