@@ -1,5 +1,6 @@
 body{
     background: url(../img/screen-1.jpg) no-repeat top;
+    background-size: cover;
 }
 .chinese-symbols-box, .chinese-label, #input, .chinese-symbols{
     font-family: 'Caveat', cursive;
@@ -37,8 +38,9 @@ body{
 }
 .chinese-symbols-btn {
     width: 30%;
-    font-size: 2rem;
     background-color: #f05d9a;
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
     color: #000000;
     margin: 2rem auto;
     cursor: pointer;
