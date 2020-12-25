@@ -1,0 +1,38 @@
+.planets-btn, #film {
+    display: inline-block;
+    font-family: 'Bungee Outline', cursive;
+    border-radius: 30px;
+    outline: none;
+    padding: 10px 22px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    background-color: #e4ed9f;
+    box-shadow: inset 0px -1px 10px 9px #92a061, 2px 5px 16px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    margin: 15px;
+    transition: all 1s ease-in-out;
+}
+.planets-btn:last-child{
+    position: fixed;
+    bottom: 2px;
+    left: 37%;
+}
+.planets-btn:hover{
+    box-shadow: 0 0 10px 0 #ffff00 inset, 0 0 20px 2px #ffff00;
+}
+.planets-btn:active{
+    transform: scale3d(0, 0, 1);
+}
+#film{
+    width: 85px;
+    font-size: 30px;
+    appearance: none;
+    background-image: url(../img/icons8-expand-arrow-64.png); 
+    background-repeat: no-repeat;
+    background-position: right 13px top 50%, 0 0;
+    background-size: 20px auto, 100%;
+}

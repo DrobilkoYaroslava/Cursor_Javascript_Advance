@@ -1,0 +1,115 @@
+body{
+    background-color: #000;
+    color: #fff;
+    max-width: 1440px;
+    height: 100%;
+}
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.stars {
+    background: black url(../img/starsbganim.png) repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 0;
+}
+.twinkling {
+    width: 10000px;
+    height: 100%;
+    background: transparent url("../img/twinklingbganim.png") repeat;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    animation: move-background 70s linear infinite;
+}
+.clouds {
+    width: 10000px;
+    height: 100%;
+    background: transparent url("../img/clouds_repeatbganim.png") repeat;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    animation: move-background 50s linear infinite;
+}
+.death-star {
+    height: 70vh;
+    width: 70vh;
+    position: absolute;
+    z-index: 3;
+    right: 20px;
+}
+.main-container{
+    width: 90%;
+    margin: 5vh auto;
+}
+.planets-title {
+    font-family: 'Audiowide', cursive;
+    font-size: 12vh;
+}
+.planets-list{
+    list-style-image: url(../img/icons8-planet-35.png);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 4vh;
+    letter-spacing: 1.5px;
+    line-height: 5vh;
+    margin-left: 8vh;
+    margin-top: 1.5vh;
+}
+.wookiee-img{
+    width: 15%;
+    left: 45%;
+    bottom: 0%;
+    position: fixed;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0; }
+}
+
+@keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+@-webkit-keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+@-moz-keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+@-webkit-keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bungee+Outline&family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="shortcut icon" href="img/swards.png">
+    <link rel="stylesheet" href="css/main.css">
+    <title>HW-12-Work-with-server</title>
+</head>
+<body>
+    <div class="preloader" id="preloader-id">
+        <div class="starwars-demo">
+            <img src="img/star.svg" alt="Star" class="star">
+            <img src="img/wars.svg" alt="Wars" class="wars">
+            <h2 class="byline" id="byline">May the Force be with you</h2>
+        </div>
+    </div>
+        <header class="header">
+            <h1 class="title">Star Wars</h1>
+            <p class="page-info">Select the episode and see all the characters</p>
+        </header>
+        <main class="main-container">
+            <div class="film-people">
+                    <select id="film">
+                        <option selected value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <button class="film-btn planets-btn" type="submit">Show</button>
+                    <button class="planets-btn" id="planets-page-btn">Planets</button>
+                <div class="people">
+                    <h2 class="episode-title" id="title"></h2>
+                    <table class="table"></table>
+                </div>
+            </div>
+        </main>
+    <footer class="footer">
+        <img class="footer-img" src="img/star-wars-wallpaper-5.jpg" alt="all characters">
+    </footer>
+    <script src="js/preloader.js"></script>
+    <script src="js/consts.js"></script>
+    <script src="js/characters.js"></script>
+    <script src="js/film.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
