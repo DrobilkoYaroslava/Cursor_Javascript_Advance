@@ -1,4 +1,4 @@
-const BASE_URL = "https://swapi.dev/api/";
+const BASE_URL = "http://swapi.dev/api/";
 const IMAGES = {
     "Luke Skywalker": "img/characters/lukeskywalker.png",
     "C-3PO": "img/characters/c-3po.png",
