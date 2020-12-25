@@ -63,3 +63,6 @@ body{
 .footer{
     width: 100%;
 }
+.wrapper{
+    display: none;
+}
