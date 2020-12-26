@@ -10,8 +10,7 @@
     visibility: visible;
 }
 .done{
-    opacity: 0;
-    visibility: hidden;
+    display: none;
 }
 .starwars-demo {
     height: 27em;
