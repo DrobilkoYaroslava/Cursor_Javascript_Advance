@@ -6,11 +6,9 @@ const episodeName = document.querySelector('#title');
 const planetsPageBtn = document.querySelector('#planets-page-btn');
 
 
-planetsPageBtn.addEventListener('click', function() {
-    window.location.href = 'planets.html';
-});
+planetsPageBtn.addEventListener('click', () => window.location.href = 'planets.html');
 
-showBtn.addEventListener('click', function(){
+showBtn.addEventListener('click', () => {
     table.innerHTML = "";
     fetch(BASE_URL + 'films/' + select.value)
     .then((response) => {
@@ -56,12 +54,13 @@ function convertObjValueToDisplayValue(key, value){
             switch (value) {
                 case 'male':
                 case 'female':
+                case 'hermaphrodite':
                     const img = document.createElement("img");
                     img.setAttribute("src", `img/${value}.png`);
                     img.classList.add("gender")
                     return img;
                 default:
-                    return document.createTextNode(value);
+                    return document.createTextNode('droid');
             }
         case 'imgSrc':
             const img = document.createElement("img");

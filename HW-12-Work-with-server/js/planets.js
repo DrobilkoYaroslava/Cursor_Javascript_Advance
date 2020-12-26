@@ -7,12 +7,12 @@ let activeList = {};
 let currentPage = 1;
 let queryParam = "";
 
-wookieeBtn.addEventListener('click', function(){
+wookieeBtn.addEventListener('click', () => {
     queryParam = queryParam.length ? '' : '&format=wookiee';
     loadData(currentPage, queryParam);
 });
 
-backBtn.addEventListener('click', function(event){
+backBtn.addEventListener('click', (event) => {
     if(Object.keys(activeList).length && (activeList.previous || activeList[WOOKIEE_KEYS["previous"]])){
         currentPage = currentPage - 1;
         if(currentPage >= 1){
@@ -22,7 +22,7 @@ backBtn.addEventListener('click', function(event){
         event.target.setAttribute('active', 'false');
     }
 });
-nextBtn.addEventListener('click', function(event){
+nextBtn.addEventListener('click', (event) => {
     if(Object.keys(activeList).length && (activeList.next || activeList[WOOKIEE_KEYS["next"]])){
         currentPage = currentPage + 1;
         if(currentPage <= 6){

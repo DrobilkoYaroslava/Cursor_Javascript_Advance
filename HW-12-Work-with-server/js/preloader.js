@@ -15,12 +15,12 @@ for(i = 0; i < bylineArr.length; i++){
     }
 }
 
-document.body.onload = function(){
-    setTimeout(function(){
+document.body.onload = () => {
+    setTimeout(() => {
         const preloader = document.querySelector('#preloader-id');
         if(!preloader.classList.contains('done')){
             preloader.classList.add('done');
             wrapper.style.display = "block";
         }
-    }, 6000);
+    }, 6500);
 }
