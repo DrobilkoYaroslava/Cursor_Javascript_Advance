@@ -5,7 +5,7 @@ const pageBtn = document.querySelector('.chinese-symbols-btn');
 const DELAY = 50;
 
 async function getRandomChinese(length){
-    let promises = [];
+    const promises = [];
     for (let index = 0; index < length; index++) {
         const promiseItem = new Promise((resolve) => { 
             const result = String.fromCharCode(String(Date.now() + index).slice(-5));
