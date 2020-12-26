@@ -41,13 +41,11 @@ function loadData(pageNumber, query = ""){
         return response.text();
     })
     .then((text) => {
-        
         const data = JSON.parse(text.replace(/whhuanan/g, '"whhuanan"'));
         activeList = data;
         displayPlanetsList(activeList.results || activeList[WOOKIEE_KEYS["results"]]);
         nextBtn.setAttribute('active', `${(activeList.next !== null) || (activeList[WOOKIEE_KEYS["next"]] !== null)}`);
         backBtn.setAttribute('active',`${(activeList.previous !== null) || (activeList[WOOKIEE_KEYS["previous"]] !== null)}`);
-
     });
 }
 
