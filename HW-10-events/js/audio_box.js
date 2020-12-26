@@ -1,11 +1,11 @@
 class AudioBox{
-    constructor(id = 0, char = "", audioURL = "", answerID = "", trueAnsw = "", falseAnsw = ""){
-        this.id = id;
-        this.char = char;
-        this.audioURL = audioURL;
-        this.answerID = answerID;
-        this.trueAnsw = trueAnsw;
-        this.falseAnsw = falseAnsw;
+    constructor(argsData = {}){
+        this.id = argsData.id;
+        this.char = argsData.char;
+        this.audioURL = argsData.url;
+        this.answerID = argsData.answerID;
+        this.trueAnsw = argsData.success;
+        this.falseAnsw = argsData.failure;
     }
     getChar(){
         return this.char;

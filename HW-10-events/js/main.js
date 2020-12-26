@@ -10,7 +10,15 @@ let activeButton = "";
 
 function objectsInit() {
     buttons.forEach((value) => {
-        const objc = new AudioBox(value.id, convertIDToKey(value.id), mediaForId(value.id), "", "Yeah! You are right!&nbsp;&nbsp;🥳&nbsp;😍", "Ohh so sorry! You lose&nbsp;&nbsp;😢&nbsp;😕");
+        const argsData = {
+            id: value.id,
+            char: convertIDToKey(value.id),
+            url: mediaForId(value.id),
+            answerID: "",
+            success: "Yeah! You are right!&nbsp;&nbsp;🥳&nbsp;😍",
+            failure: "Ohh so sorry! You lose&nbsp;&nbsp;😢&nbsp;😕"
+            };
+        const objc = new AudioBox(argsData);
         objects.push(objc);
     });
     objects.shift();
@@ -91,15 +99,15 @@ function mediaForId(id) {
 }
 
 function addId(){
-    for(let i = 0; i < inputs.length; i++){
-        inputs[i].setAttribute('id', i);
-    }
-    for(let i = 0; i < labels.length; i++){
-        labels[i].setAttribute('for', i);
-    }
-    for(let i = 0; i < buttons.length; i++){
-        buttons[i].setAttribute('id', i);
-    }
+    inputs.forEach((input, index) => {
+        input.setAttribute('id', index);
+    });
+    labels.forEach((label, index) => {
+        label.setAttribute('for', index);
+    });
+    buttons.forEach((button, index) => {
+        button.setAttribute('id', index);
+    });
 }
 
 addId();
@@ -109,7 +117,7 @@ function addEvents() {
     document.addEventListener('keydown', function (event) {
         const char = event.key.toLowerCase();
         const existObject = objects.filter((el) => el.char === char);
-        if(existObject.length === 0){
+        if(!existObject.length){
             audioEl.pause();
             return;
         }
@@ -119,14 +127,12 @@ function addEvents() {
             return
         }
         activeButton = char;
-        const result = objects.find(function(objc) {
-            return objc.getChar() === char;
-        });
+        const result = objects.find( el => el.getChar() === char);
         didPlay(audioEl, null, result.audioURL);
     });
 
-    buttons.forEach((div) => {
-        div.addEventListener('click', function (event) {
+    buttons.forEach((btn) => {
+        btn.addEventListener('click', function (event) {
             const activeObjc = objects.find(function(objc){
                 return objc.id === event.target.id;
             });
@@ -134,8 +140,8 @@ function addEvents() {
         });
     })
     
-    inputs.forEach((radio) => {
-        radio.addEventListener('click', function (event) {
+    inputs.forEach((input) => {
+        input.addEventListener('click', function (event) {
             const parent = event.target.parentNode.parentNode.parentNode;
             const id = parent.id.replace("box", "");
             const currentObjc = objects.find(function(objc){
