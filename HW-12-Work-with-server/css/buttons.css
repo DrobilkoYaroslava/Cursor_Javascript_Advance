@@ -36,3 +36,28 @@
     background-position: right 13px top 50%, 0 0;
     background-size: 20px auto, 100%;
 }
+
+@media only screen and (max-width: 425px){
+    .planets-btn, #film{
+        font-size: 14px;
+        line-height: 20px;
+        padding: 5px 15px;
+    }
+    .planets-btn:last-child {
+        position: fixed;
+        bottom: 2px;
+        left: 17%;
+    }
+}
+@media only screen and (max-width: 480px){
+    .planets-btn, #film{
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .planets-btn, #film{
+        font-size: 20px;
+        line-height: 30px;
+    }
+}

@@ -8,19 +8,21 @@ body{
     margin: 5vh auto;
 }
 .header{
-    padding: 50px 0px 0px 50px;
+    padding: 50px 50px 0px 50px;
 }
 .title{
     font-family: 'Audiowide', cursive;
     font-size: 12vh;
+    margin-bottom: 3vh;
 }
 .page-info{
     font-family: 'Audiowide', cursive;
     font-size: 4vh;
+    line-height: 5vh;
     margin-bottom: 2vh;
 }
 .photo{
-    width: 50%;
+    width: 60%;
     border-radius: 50%;
 }
 .gender{
@@ -36,13 +38,12 @@ body{
 .table{
     width: 80%;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 2vh;
 }
 .table-head, .table-text{
     width: 25%;
     font-size: 3vh;
     font-weight: 600;
-    text-align: justify;
+    text-align: center;
     padding: 20px;
     border-bottom: 5px dashed rgba(253,255,46,0.6);
 }
@@ -51,6 +52,7 @@ body{
     text-shadow: 1px 1px 0 #ffff00, 1px -1px 0 #ffff00, -1px 1px 0 #ffff00, -1px -1px 0 #ffff00, 1px 0px 0 #ffff00, 0px 1px 0 #ffff00, -1px -1px 0 #ffff00, 0px -1px 0 #ffff00;
 }
 .table-cell{
+    text-align: center;
     vertical-align: middle;
     padding: 10px;
 }
@@ -65,4 +67,29 @@ body{
 }
 .wrapper{
     display: none;
+}
+
+@media only screen and (max-width: 425px){
+    .title{
+        font-size: 10vh;
+        margin-bottom: 2vh;
+    }
+    .header{
+        padding: 30px 30px 0px 30px;
+    }
+    .episode-title{
+        font-size: 4vh;
+    }
+    .table-head, .table-text{
+        font-weight: 400;
+        padding: 5px;
+    }
+    .table-cell {
+        padding: 7px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .photo {
+        width: 100%;
+    }
 }
