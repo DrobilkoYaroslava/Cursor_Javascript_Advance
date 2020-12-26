@@ -22,5 +22,5 @@ document.body.onload = function(){
             preloader.classList.add('done');
             wrapper.style.display = "block";
         }
-    }, 6200);
+    }, 6000);
 }
