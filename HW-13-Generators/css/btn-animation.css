@@ -4,8 +4,8 @@
     border-radius: 10px;
     border: 2px solid #A728B1;
     font-family: 'Jura', sans-serif;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: calc((100vw - 320px)/(1440 - 320) * (16 - 12) + 12px);
+    line-height: calc((100vw - 320px)/(1440 - 320) * (20 - 14) + 14px);
     font-weight: 700;
     color: #A728B1;
     text-align: center;
