@@ -9,6 +9,26 @@ const numberIdGenerator = createNumberIdGenerator();
 const stringIdGenerator = createStringIdGenerator();
 const fontGenerator = changeFontSize(14);
 fontGenerator.next();
+const fonts = [
+    "Comfortaa",
+    "EB Garamond",
+    "Jura",
+    "Lobster",
+    "Oswald",
+    "Pacifico",
+    "Roboto"
+];
+const colors = [
+    "#5b96f5",
+    "#9544f2",
+    "#ff6370",  
+    "#157d20",
+    "#fc8e08",
+    "#077f8c",
+    "#bdbd04",
+    "#e309df",
+    "#000000"
+];
 
 numberIdBtn.addEventListener('click', () => {
     setTimeout(() => {
@@ -48,9 +68,13 @@ function* changeFontSize(size) {
         switch(yield){
             case "up":
                 currentFontSize += 2;
+                randomColor(0, colors.length);
+                randomFontFamily(0, fonts.length);
             break;
             case "down":
                 currentFontSize -= 2;
+                randomColor(0, colors.length);
+                randomFontFamily(0, fonts.length);
             break;
             default:
                 break;
@@ -62,4 +86,16 @@ function* changeFontSize(size) {
         }
         fontResult.forEach((p) => {p.style.fontSize = `${currentFontSize}px`});
     }
+}
+function randomColor(min, max) {
+    let random = Math.floor(Math.random() * (max - min + 1)) + min;
+    fontResult.forEach((p) => {
+        p.style.color = `${colors[random]}`;
+    });
+}
+function randomFontFamily(min, max) {
+    let random = Math.floor(Math.random() * (max - min + 1)) + min;
+    fontResult.forEach((p) => {
+        p.style.fontFamily = `${fonts[random]}`;
+    });
 }
