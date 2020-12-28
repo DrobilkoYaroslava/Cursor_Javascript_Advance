@@ -11,17 +11,17 @@ const fontGenerator = changeFontSize(14);
 fontGenerator.next();
 
 numberIdBtn.addEventListener('click', () => {
-    numberIdResult.innerHTML = numberIdGenerator.next().value;
+    setTimeout(() => {
+        numberIdResult.innerHTML = numberIdGenerator.next().value;
+    },2000);
 });
 stringIdBtn.addEventListener('click', () => {
+    setTimeout(() => {
     stringIdResult.innerHTML = stringIdGenerator.next().value;
+    },2000);
 });
-plusBtn.addEventListener('click', () => {
-    fontGenerator.next("up").value;
-});
-minusBtn.addEventListener('click', () => {
-    fontGenerator.next("down").value;
-});
+plusBtn.addEventListener('click', () => fontGenerator.next("up").value);
+minusBtn.addEventListener('click', () => fontGenerator.next("down").value);
 
 function* createNumberIdGenerator(number = Infinity){
     for (let i = 1; i < number; i++){

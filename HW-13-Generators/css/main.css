@@ -1,28 +1,54 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Jura', sans-serif;
+}
+body{
+    background: linear-gradient(to right, rgba(252,252,252,0.1) 0%, rgba(255,255,255, 0.3) 55%, rgba(240,209,217,0.7) 100%), #fff url(../img/holi-color-background-on-white-background.jpg) no-repeat fixed;
+    background-size: cover;
+}
 .page-wrapper {
+    width: 90%;
+    margin: 50px auto;
 }
 .id-generator__box {
+    display: flex;
+    justify-content: start;
+    width: 90%;
+    height: 130px;
+    margin: 0 auto;
+    border-bottom: 3px dashed #000;
 }
-.id-generator__btn {
+.id-generator__title, .result-box-title{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 30px;
+}
+.id-generator__btn-box {
+    width: 30%;
+}
+.id-generator__btn-box:last-child{
+    width: 70%;
 }
 .id-generator__result {
-}
-.font-generator__box {
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 20px;
+    margin: 20px;
 }
 .font-generator__btn-box {
-}
-.font-generator__btn {
-    /* border: none;
-    outline: none;
-    cursor: pointer;
-    background: none; */
-}
-.font-generator__btn:active{
-
-}
-.font-generator__result-box {
-    /* font-size: 14px; */
-}
-.result-box-title {
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .font-generator__result-text {
+    line-height: initial;
+}
+.font-generator__result-text:last-of-type {
+    padding-bottom: 50px;
 }
