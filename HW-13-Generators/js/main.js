@@ -88,13 +88,13 @@ function* changeFont(size) {
     }
 }
 function randomColor(min, max) {
-    let random = Math.floor(Math.random() * (max - min + 1)) + min;
+    const random = Math.floor(Math.random() * (max - min + 1)) + min;
     fontResult.forEach((p) => {
         p.style.color = `${colors[random]}`;
     });
 }
 function randomFontFamily(min, max) {
-    let random = Math.floor(Math.random() * (max - min + 1)) + min;
+    const random = Math.floor(Math.random() * (max - min + 1)) + min;
     fontResult.forEach((p) => {
         p.style.fontFamily = `${fonts[random]}`;
     });
