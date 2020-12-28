@@ -7,7 +7,7 @@ const minusBtn = document.querySelector('#minus-btn');
 const fontResult = document.querySelectorAll('.font-generator__result-text');
 const numberIdGenerator = createNumberIdGenerator();
 const stringIdGenerator = createStringIdGenerator();
-const fontGenerator = changeFontSize(14);
+const fontGenerator = changeFont(14);
 fontGenerator.next();
 const fonts = [
     "Comfortaa",
@@ -61,7 +61,7 @@ function createStringId(){
     });
 }
 
-function* changeFontSize(size) {
+function* changeFont(size) {
     fontResult.forEach(p => p.style.fontSize = size + "px");
     let currentFontSize = parseInt(fontResult[0].style.fontSize);
     while (true) {
