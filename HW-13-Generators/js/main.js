@@ -55,8 +55,8 @@ function* changeFontSize(size) {
             default:
                 break;
         }
-        if(currentFontSize < 8){
-            currentFontSize = 8;
+        if(currentFontSize < 6){
+            currentFontSize = 6;
         } else if(currentFontSize > 40){
             currentFontSize = 40;
         }
